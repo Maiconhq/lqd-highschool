@@ -33,6 +33,55 @@
             background-color: #fff;
         }
 
+        /* Top Bar - Menu Portal */
+        .top-bar {
+            background-color: #f1f5f9;
+            padding: 0.4rem 0;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portal-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .portal-menu li {
+            margin-right: 1.2rem;
+            position: relative;
+        }
+
+        .portal-menu li:not(:last-child):after {
+            content: "|";
+            position: absolute;
+            right: -0.7rem;
+            color: #cbd5e1;
+        }
+
+        .portal-menu a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .portal-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .portal-menu a i {
+            margin-right: 0.3rem;
+            font-size: 0.7rem;
+        }
+
         /* Header */
         header {
             background-color: var(--primary-color);
@@ -40,7 +89,7 @@
             padding: 1rem 0;
             position: fixed;
             width: 100%;
-            top: 0;
+            top: 30px; /* Điều chỉnh vị trí header để không đè lên top-bar */
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -94,97 +143,99 @@
         nav ul li a:hover {
             color: var(--accent-color);
         }
+        
         /* CTA lớn dưới bước tuyển sinh */
-.cta-actions{
-  text-align:center;
-  margin-top:2rem;
-  display:flex;
-  gap:1rem;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.btn-lg{
-  padding:1rem 2.25rem;
-  border-radius:50px;
-  font-size:1.05rem;
-  box-shadow:0 6px 18px rgba(0,0,0,0.12);
-}
-.btn-lg i{ margin-right:.5rem; }
+        .cta-actions{
+          text-align:center;
+          margin-top:2rem;
+          display:flex;
+          gap:1rem;
+          justify-content:center;
+          flex-wrap:wrap;
+        }
+        .btn-lg{
+          padding:1rem 2.25rem;
+          border-radius:50px;
+          font-size:1.05rem;
+          box-shadow:0 6px 18px rgba(0,0,0,0.12);
+        }
+        .btn-lg i{ margin-right:.5rem; }
 
-/* Nút viền phụ */
-.btn.btn-outline{
-  background:transparent;
-  color:var(--primary-color);
-  border:2px solid var(--primary-color);
-}
-.btn.btn-outline:hover{
-  background:var(--primary-color);
-  color:#fff;
-  transform:translateY(-3px);
-}
+        /* Nút viền phụ */
+        .btn.btn-outline{
+          background:transparent;
+          color:var(--primary-color);
+          border:2px solid var(--primary-color);
+        }
+        .btn.btn-outline:hover{
+          background:var(--primary-color);
+          color:#fff;
+          transform:translateY(-3px);
+        }
 
-/* Khối FAQ nhanh */
-.faq-quick{
-  margin-top:2.5rem;
-}
-.faq-quick__inner{
-  background: linear-gradient(135deg, rgba(30,58,138,0.95), rgba(22,163,74,0.95));
-  color:#fff;
-  border-radius:16px;
-  padding:1.5rem;
-  box-shadow:0 10px 24px rgba(0,0,0,0.15);
-}
-.faq-quick__head{
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  margin-bottom:1rem;
-}
-.faq-quick__head i{
-  font-size:1.75rem;
-}
-.faq-quick__head h3{
-  margin:0;
-  font-size:1.4rem;
-}
-.faq-quick__head p{
-  margin:.2rem 0 0 0;
-  opacity:.9;
-}
+        /* Khối FAQ nhanh */
+        .faq-quick{
+          margin-top:2.5rem;
+        }
+        .faq-quick__inner{
+          background: linear-gradient(135deg, rgba(30,58,138,0.95), rgba(22,163,74,0.95));
+          color:#fff;
+          border-radius:16px;
+          padding:1.5rem;
+          box-shadow:0 10px 24px rgba(0,0,0,0.15);
+        }
+        .faq-quick__head{
+          display:flex;
+          align-items:center;
+          gap:1rem;
+          margin-bottom:1rem;
+        }
+        .faq-quick__head i{
+          font-size:1.75rem;
+        }
+        .faq-quick__head h3{
+          margin:0;
+          font-size:1.4rem;
+        }
+        .faq-quick__head p{
+          margin:.2rem 0 0 0;
+          opacity:.9;
+        }
 
-/* Các nút nhanh trong FAQ */
-.faq-quick__actions{
-  display:flex;
-  gap:.75rem;
-  flex-wrap:wrap;
-}
-.quick-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:.5rem;
-  padding:.75rem 1.1rem;
-  background:#ffffff;
-  color:var(--dark-color);
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
-  transition:transform .25s ease, box-shadow .25s ease;
-  box-shadow:0 4px 12px rgba(0,0,0,0.12);
-}
-.quick-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 18px rgba(0,0,0,0.2);
-}
-.quick-btn i{
-  font-size:1rem;
-}
+        /* Các nút nhanh trong FAQ */
+        .faq-quick__actions{
+          display:flex;
+          gap:.75rem;
+          flex-wrap:wrap;
+        }
+        .quick-btn{
+          display:inline-flex;
+          align-items:center;
+          gap:.5rem;
+          padding:.75rem 1.1rem;
+          background:#ffffff;
+          color:var(--dark-color);
+          border-radius:999px;
+          text-decoration:none;
+          font-weight:600;
+          transition:transform .25s ease, box-shadow .25s ease;
+          box-shadow:0 4px 12px rgba(0,0,0,0.12);
+        }
+        .quick-btn:hover{
+          transform:translateY(-3px);
+          box-shadow:0 8px 18px rgba(0,0,0,0.2);
+        }
+        .quick-btn i{
+          font-size:1rem;
+        }
 
-/* Responsive tinh chỉnh */
-@media (max-width:768px){
-  .btn-lg{ width:100%; justify-content:center; text-align:center; }
-  .faq-quick__head{ align-items:flex-start; }
-}
-
+        /* Responsive tinh chỉnh */
+        @media (max-width:768px){
+          .btn-lg{ width:100%; justify-content:center; text-align:center; }
+          .faq-quick__head{ align-items:flex-start; }
+          .top-bar { display: none; } /* Ẩn top bar trên mobile để tiết kiệm không gian */
+          header { top: 0; } /* Đặt lại vị trí header khi top bar ẩn */
+        }
 
         /* Hero Section */
         .hero {
@@ -195,7 +246,7 @@
             justify-content: center;
             text-align: center;
             color: white;
-            margin-top: 70px;
+            margin-top: 110px; /* Tăng margin-top để bù cho top bar và header */
         }
 
         .hero-content h2 {
@@ -673,11 +724,28 @@
     </style>
 </head>
 <body>
+    <!-- Top Bar với Menu Portal -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <ul class="portal-menu">
+                <li><a href="#"><i class="fas fa-sign-in-alt"></i> Portal</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Dành cho Phụ huynh</a></li>
+                <li><a href="#"><i class="fas fa-graduation-cap"></i> Dành cho Học sinh</a></li>
+                <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Dành cho Giáo viên</a></li>
+            </ul>
+            <div class="top-bar-actions">
+                <a href="#" style="color: #64748b; text-decoration: none; font-size: 0.8rem;">
+                    <i class="fas fa-search"></i> Tìm kiếm
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                 <div class="logo">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMmwxMCA2LjU3NkwyMiAxNC41ODV2My43MjFMMTIgMjIgMiAxOC4zMDZ2LTMuNzIxTDIgOC41NzZMMTIgMnoiPjwvcGF0aD48cGF0aCBkPSJNMTIgMTJhMiAyIDAgMCAwIDIgMHY3LjM1NmE0NjUuNDcgNDY1LjQ3IDAgMCAwIDAtOS4zMTJjMC0xLjIzLS44NzktMi4wNTItMi0yLjA1MnMtMiAuODIzLTIgMi4wNTJhNDY1LjQ3IDQ2NS40NyAwIDAgMCAwIDkuMzEyVjEyYTIgMiAwIDAgMCAyLTJ6Ij48L3BhdGg+PC9zdmc+" alt="Logo Trường Lê Quý Đôn">
                     <h1>TRƯỜNG THPT LÊ QUÝ ĐÔN</h1>
                 </div>
@@ -772,10 +840,10 @@
                             <button class="tab-btn" data-tab="tab5">Đội Ngũ Giáo Viên</button>
                         </div>
                         <div class="tab-content active" id="tab1">
-                            <p>Trường Lê Quý Đôn khác biệt với chương trình giáo dục toàn diện, chú trọng phát triển cả trí tuệ, thể chất và nhân cách. Chúng tôi áp dụng phương pháp giảng dạy hiện đại, học đi đôi với hành, lý thuyết gắn liền với thực tiễn.</p>
+                            <p>Trường Lê Quý Đôn khác biệt với chương trình giáo dục toàn diện, chú trọng phát triển cả trí tuệ, thể chất và nhân cách. Chúng tôi áp dụng phương pháp giảng dạy hiện đại, học đi đôi với hành, lý thuyết gắliền với thực tiễn.</p>
                         </div>
                         <div class="tab-content" id="tab2">
-                            <p><strong>Sứ mệnh:</strong> Cung cấp môi trường giáo dục chất lượng cao, phát huy tối đa tiềm năng của học sinh, trang bị kiến thức và kỹ năng để thành công trong cuộc sống.</p>
+                            <p><strong>Sứ mệnh:</strong> Cung cấp môi trường giáo dục chất lượng cao, phát huy tối đa tiề năng của học sinh, trang bị kiến thức và kỹ năng để thành công trong cuộc sống.</p>
                             <p><strong>Giá trị cốt lõi:</strong> Tôn trọng, trách nhiệm, chính trực, sáng tạo và hợp tác.</p>
                         </div>
                         <div class="tab-content" id="tab3">
@@ -794,71 +862,72 @@
     </section>
 
     <!-- Admission Section -->
-<section id="admission" class="admission">
-  <div class="container">
-    <div class="section-title">
-      <h2>Tuyển Sinh</h2>
-      <p>Thông tin về quy trình và điều kiện tuyển sinh</p>
-    </div>
+    <section id="admission" class="admission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tuyển Sinh</h2>
+                <p>Thông tin về quy trình và điều kiện tuyển sinh</p>
+            </div>
 
-    <div class="admission-steps">
-      <div class="step-card fade-in">
-        <div class="number">1</div>
-        <h3><a href="inquire.html" style="color: inherit; text-decoration: none;">Inquire</a></h3>
-        <p>Tìm hiểu thông tin về trường và chương trình học</p>
-      </div>
-      <div class="step-card fade-in">
-        <div class="number">2</div>
-        <h3><a href="visit.html" style="color: inherit; text-decoration: none;">Visit</a></h3>
-        <p>Tham quan trường và gặp gỡ ban giám hiệu</p>
-      </div>
-      <div class="step-card fade-in">
-        <div class="number">3</div>
-        <h3><a href="applying.html" style="color: inherit; text-decoration: none;">Applying</a></h3>
-        <p>Nộp hồ sơ đăng ký tuyển sinh</p>
-      </div>
-      <div class="step-card fade-in">
-        <div class="number">4</div>
-        <h3>Interview</h3>
-        <p>Tham gia phỏng vấn và kiểm tra đầu vào</p>
-      </div>
-    </div>
+            <div class="admission-steps">
+                <div class="step-card fade-in">
+                    <div class="number">1</div>
+                    <h3><a href="inquire.html" style="color: inherit; text-decoration: none;">Inquire</a></h3>
+                    <p>Tìm hiểu thông tin về trường và chương trình học</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="number">2</div>
+                    <h3><a href="visit.html" style="color: inherit; text-decoration: none;">Visit</a></h3>
+                    <p>Tham quan trường và gặp gỡ ban giám hiệu</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="number">3</div>
+                    <h3><a href="applying.html" style="color: inherit; text-decoration: none;">Applying</a></h3>
+                    <p>Nộp hồ sơ đăng ký tuyển sinh</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="number">4</div>
+                    <h3>Interview</h3>
+                    <p>Tham gia phỏng vấn và kiểm tra đầu vào</p>
+                </div>
+            </div>
 
-    <!-- CTA chính: Đăng ký -->
-    <div class="fade-in cta-actions">
-      <a href="applying.html" class="btn btn-lg">
-        <i class="fas fa-pen-to-square"></i> Đăng ký ngay
-      </a>
-      <a href="tuvantuyensinh.html" class="btn btn-outline">
-        <i class="fas fa-comments"></i> Tư vấn tuyển sinh
-      </a>
-    </div>
+            <!-- CTA chính: Đăng ký -->
+            <div class="fade-in cta-actions">
+                <a href="applying.html" class="btn btn-lg">
+                    <i class="fas fa-pen-to-square"></i> Đăng ký ngay
+                </a>
+                <a href="tuvantuyensinh.html" class="btn btn-outline">
+                    <i class="fas fa-comments"></i> Tư vấn tuyển sinh
+                </a>
+            </div>
 
-    <!-- Thay FAQ cũ bằng khối CTA đẹp & thân thiện -->
-    <div class="fade-in faq-quick">
-      <div class="faq-quick__inner">
-        <div class="faq-quick__head">
-          <i class="fas fa-circle-question"></i>
-          <div>
-            <h3>Câu hỏi thường gặp</h3>
-            <p>Giải đáp nhanh các thắc mắc phổ biến của phụ huynh & học sinh</p>
-          </div>
+            <!-- Thay FAQ cũ bằng khối CTA đẹp & thân thiện -->
+            <div class="fade-in faq-quick">
+                <div class="faq-quick__inner">
+                    <div class="faq-quick__head">
+                        <i class="fas fa-circle-question"></i>
+                        <div>
+                            <h3>Câu hỏi thường gặp</h3>
+                            <p>Giải đáp nhanh các thắc mắc phổ biến của phụ huynh & học sinh</p>
+                        </div>
+                    </div>
+                    <div class="faq-quick__actions">
+                        <a href="faq.html" class="quick-btn">
+                            <i class="fas fa-list-ul"></i> Xem FAQ
+                        </a>
+                        <a href="tuition.html" class="quick-btn">
+                            <i class="fas fa-receipt"></i> Học phí
+                        </a>
+                        <a href="scholarship.html" class="quick-btn">
+                            <i class="fas fa-award"></i> Học bổng
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="faq-quick__actions">
-          <a href="faq.html" class="quick-btn">
-            <i class="fas fa-list-ul"></i> Xem FAQ
-          </a>
-          <a href="tuition.html" class="quick-btn">
-            <i class="fas fa-receipt"></i> Học phí
-          </a>
-          <a href="scholarship.html" class="quick-btn">
-            <i class="fas fa-award"></i> Học bổng
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
 
 
 
